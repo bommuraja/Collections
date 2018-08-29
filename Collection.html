@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Application</title>
+  
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a></a></div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a></a></li>
+                    <li><a></a></li>
+                    <li><a></a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+        <div class="container">
+            <h3>Grid table</h3>
+            <button type="button" class="btn btn-default" id="btnAddGrid">Add</button>
+            <div class="table-responsive">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th width="10%">#</th>
+                            <th width="20%">Photo Name</th>
+                            <th width="50%">Pahto Path</th>
+                            <th width="20%" colspan="2">Actions</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td width="10%">1</td>
+                            <td width="20%">Anna</td>
+                            <td width="50%">Pitt</td>
+                            <td width="10%"><button class="btn btn-link"> Edit </button></td>
+                            <td width="10%"><button class="btn btn-link"> Delete </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+
+        <div class="container">
+            <!-- Trigger the modal with a button -->
+            <!-- Modal -->
+            <div class="modal fade" id="myModal" role="dialog">
+                <div class="modal-dialog">
+
+                    <!-- Modal content-->
+                    <div class="modal-content">
+                        <div class="modal-header bg-info">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                        </div>
+                        <div class="modal-body" style="padding:40px 50px;">
+                            <form role="form">
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="usrname" placeholder="Enter photo name">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="psw" placeholder="Enter photo path">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" id="psw" placeholder="Enter description">
+                                </div>
+
+                            </form>
+                        </div>
+                        <div class="modal-footer bg-info">
+                            <button type="button" class="btn btn-default pull-right" style="margin-left:2%;">Add</button>
+                            <button type="button" class="btn btn-default pull-right" data-dismiss="modal">
+                                Cancel
+                            </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+</body>
+</html>
+
+
+
+<script>
+    $(document).ready(function () {
+        $("#btnAddGrid").click(function () {
+            $("#myModal").modal();
+        });
+    });
+</script>
